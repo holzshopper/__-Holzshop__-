@@ -1,0 +1,18 @@
+Fragen für Meeting:
+
+1. Was soll gefiltert werden?
+2. Welche Produkte bieten wir an?
+3. Zuteilung Compontents/Teammitglieder
+
+
+Bilderrahmen (Rechteckig, Quadratisch, Runde Kanten)
+Fußböden (Rechteckig, Quadratisch)
+Tische (Rechteckig, Quadratisch, Kreisförmig, Ovalförmig, Anzahl Plätze)
+Bänke (Anzahl Plätze, Anzahl Füße)
+Stühle (Mit Lehne, ohne Lehne, runder Sitz, eckiger Sitz)
+Betten (diverse Breiten, diverse Längen, Bettende [eckig, rund, oval])
+Regale (diverse Höhen, diverse Breiten, Anzahl Fächer)
+Schranke (diverse Höhen, diverse Breiten, Anzahl Fächer, mit Balken für Kleiderhaken, Glastür & Holztür)
+Bauholz (runde Stangen, eckige Stangen, Bretter)
+Zubehör (Lack, Farbe)
+

@@ -1,0 +1,5 @@
+1. Startseite & Basics (Header, Werbung) --> Sergej Henrichs
+2. Filter --> Nils Brandscheidt
+3. Warenkorb & Rechnung & Produktansicht --> Pascal Felix
+4. Account (inkl. Login Maske, Captcha) --> Nils Reuter
+5. Designer/Branding --> James Welsh
