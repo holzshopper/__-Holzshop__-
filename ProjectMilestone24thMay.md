@@ -17,7 +17,7 @@ Unsere Website wird ein Holzshop sein mit folgenden Komponenten:
     8. Designer/Branding
 
 ###Aufteilung
-Mitglied | Modul(e)
+Mitglied | Komponente(n)
 ------------- | -------------
 Nils Brandscheidt   | Filter von den Produkten für die Produktansicht
 Pascal Felix        | Warenkorb, Rechnung und Produktansicht
