@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { LogInMaskComponent } from './log-in-mask/log-in-mask.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LogInMaskComponent
   ],
   imports: [
     BrowserModule,
