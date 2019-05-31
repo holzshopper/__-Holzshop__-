@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -21,7 +21,21 @@ import { RegistrationMaskComponent } from './registration-mask/registration-mask
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    RouterModule.forRoot([
+      {
+        path: 'registration',
+        component: RegistrationMaskComponent
+      },
+      {
+        path: 'login',
+        component: LogInMaskComponent
+      },
+      {
+        path: '',
+        component: HomeComponent
+      }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
