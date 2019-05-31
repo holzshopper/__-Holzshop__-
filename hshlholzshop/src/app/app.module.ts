@@ -7,12 +7,14 @@ import { HomeComponent } from './components/home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { LogInMaskComponent } from './log-in-mask/log-in-mask.component';
+import { RegistrationMaskComponent } from './registration-mask/registration-mask.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LogInMaskComponent
+    LogInMaskComponent,
+    RegistrationMaskComponent
   ],
   imports: [
     BrowserModule,
