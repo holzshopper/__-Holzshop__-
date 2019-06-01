@@ -6,15 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import { LogInMaskComponent } from './log-in-mask/log-in-mask.component';
-import { RegistrationMaskComponent } from './registration-mask/registration-mask.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LogInMaskComponent,
-    RegistrationMaskComponent
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -25,11 +25,11 @@ import { RegistrationMaskComponent } from './registration-mask/registration-mask
     RouterModule.forRoot([
       {
         path: 'registration',
-        component: RegistrationMaskComponent
+        component: RegistrationComponent
       },
       {
         path: 'login',
-        component: LogInMaskComponent
+        component: LoginComponent
       },
       {
         path: '',
