@@ -13,9 +13,9 @@ export class LoginComponent implements OnInit {
   }
 
   UserLogin(event) {
-    const data = event.data
-    const email = data.getElementByID("email")
-    const password = data.getElementByID("password")
+    const data = event.data;
+    const email = data.querySelector('#email').value;
+    const password = data.querySelector('#password').value;
     console.log(email, password);
   }
 }
