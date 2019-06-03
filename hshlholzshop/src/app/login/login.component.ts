@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   }
 
   UserLogin(event) {
-    const data = event.data;
+    event.preventDefault()
+    const data = event.target;
     const email = data.querySelector('#email').value;
     const password = data.querySelector('#password').value;
     console.log(email, password);
