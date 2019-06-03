@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   }
 
   UserLogin(event) {
+    const data = event.data
     console.log(event);
   }
 }
