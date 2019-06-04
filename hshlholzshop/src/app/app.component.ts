@@ -9,14 +9,14 @@ export type EditorType = 'login' | 'registration';
 })
 export class AppComponent {
   title = 'hshlholzshop';
-  editor : EditorType = "login";
+  editor: EditorType = 'login';
 
   get showLoginEditor() {
-    return this.editor === "login";
+    return this.editor === 'login';
   }
 
   get showRegistrationEditor() {
-    return this.editor === "registration";
+    return this.editor === 'registration';
   }
 
   toggleEditor(type: EditorType) {
