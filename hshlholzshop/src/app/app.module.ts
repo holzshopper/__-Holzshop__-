@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,20 +23,7 @@ import { RegistrationComponent } from './registration/registration.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    RouterModule.forRoot([
-      {
-        path: 'registration',
-        component: RegistrationComponent
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: '',
-        component: HomeComponent
-      }
-    ])
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
