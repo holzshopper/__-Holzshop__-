@@ -13,7 +13,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   UserRegistration(event) {
-    event.preventDefault()
+    event.preventDefault();
     const data = event.target;
     const email = data.querySelector('#email').value;
     const password = data.querySelector('#password').value;
