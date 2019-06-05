@@ -2,10 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegistrationComponent } from './components/registration/registration.component';
-import { ReactiveFormsModule } from '@angular/forms';
+
 
 //Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -39,19 +36,19 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
-
+import { NgImageSliderModule } from 'ng-image-slider';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LoginComponent,
-    RegistrationComponent,
+    DashboardComponent,
   ],
   imports: [
+    NgImageSliderModule,
+    RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
     MatCheckboxModule,
     MatCheckboxModule,
     MatButtonModule,
