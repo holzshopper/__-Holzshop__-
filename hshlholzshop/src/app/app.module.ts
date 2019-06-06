@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 //Angular Material Components
@@ -38,15 +38,23 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProductFilterComponent } from './components/product-filter/product-filter.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
+    ProductFilterComponent,
+    ProductPageComponent,
+    ProductListComponent,
+    UserComponent,
   ],
   imports: [
     NgImageSliderModule,
-    RouterModule,
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatCheckboxModule,
