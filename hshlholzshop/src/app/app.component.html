@@ -1,8 +1,31 @@
-<mat-toolbar>
-    <div Style="width:100px; height: 100px">Logo</div>
-    <input mat-input>
-    <button mat-button>Search</button>
-    <button mat-button>Shopping Card</button>
-    <button mat-button>Login/Register</button>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<div class="columns">
+    <div class="column is-1 is-offset-1 is-gapless" style="background-color: cadetblue">
+        <div style="height: 100px; width: 100%;background-color: blueviolet">Logo</div>
+    </div>
+    <div class="column is-9" style="background-color: chartreuse">
+        <input mat-input>
+        <button mat-button>Search</button>
+        <button mat-button>Shopping Card</button>
+        <button mat-button>Login/Register</button>
+    </div>
+</div>
+<div class="columns">
+    <div class="column is-10 is-offset-1">
+        <mat-toolbar>
+            Navigation Toolbar (Links etc.)
+        </mat-toolbar>
+    </div>
+</div>
+<div class="columns">
+    <div class="column is-10 is-offset-1" style="background-color: cornflowerblue">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div class="columns">
+        <div class="column is-10 is-offset-1" style="background-color: coral">
+            Hallo ich bin der Footer Impressum und so.
+        </div>
+    </div>
+
+
