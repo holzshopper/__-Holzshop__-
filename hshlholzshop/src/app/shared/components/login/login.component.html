@@ -1,7 +1,17 @@
-<form (submit)="UserLogin($event)">
-  <label>Email: </label>
-  <input name="Email" type="email" required placeholder="youremailname@provider.com" id="email" value>
-  <label>Password: </label>
-  <input name="Password" type="password" required placeholder="Password" id="password" value>
-  <input type="submit" value="Submit">
-</form>
+<div id="modal-login" class="modal">
+  <div class="modal-content">
+    <form id="login-form">
+      <div class="mdc-form-field">
+        <label for="email">Email</label>
+        <input type="email" class="mdc-checkbox__native-control" id="email" placeholder="Bitte geben Sie Ihre Email-Adresse ein">
+      </div>
+      <div class="mdc-form-field">
+        <label for="password">Password</label>
+        <input type="password" class="mdc-checkbox__native-control" id="password" placeholder="Bitte geben Sie Ihr Passwort ein">
+      </div>
+      <div class="mdc-form-field">
+        <button type="submit" class="mdc-button">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
