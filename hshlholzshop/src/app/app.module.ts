@@ -43,6 +43,8 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { UserComponent } from './components/user/user.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './shared/components/login/login.component';
+import { RegistrationComponent } from './shared/components/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { FormsModule } from '@angular/forms';
     ProductPageComponent,
     ProductListComponent,
     UserComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     NgImageSliderModule,
