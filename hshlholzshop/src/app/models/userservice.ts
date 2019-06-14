@@ -21,7 +21,7 @@ export class UserService {
   }
 
   getUserById(id: number): User {
-    let index = this.index(id);
+    const index = this.index(id);
     if (index !== -1) {
       return this.objects[index];
     } else {
@@ -39,7 +39,7 @@ export class UserService {
   }
 
   getUserByEmail(email: string): User {
-    let index = this.indexEmail(email);
+    const index = this.indexEmail(email);
     if (index !== -1) {
       return this.objects[index];
     } else {
@@ -48,7 +48,7 @@ export class UserService {
   }
 
   checkUserData(email, password) {
-    let user = this.getUserByEmail(email);
+    const user = this.getUserByEmail(email);
     if (user != null) {
       if (user.password === password) {
         if (user.can_login) {
@@ -68,9 +68,9 @@ export class UserService {
   }
 
   saveNewUser(obj: User) {
-    let index = this.indexEmail(obj.email);
+    const index = this.indexEmail(obj.email);
     if (index === null) {
-      let new_id = Math.max.apply(Math, this.objects.map(function(o) {return o.id; })) + 1;
+      const new_id = Math.max.apply(Math, this.objects.map(function(o) {return o.id; })) + 1;
       obj.id = new_id;
       this.objects.push(obj);
       console.log('Registrierung erfolgreich');
@@ -79,5 +79,4 @@ export class UserService {
     }
     this.changed.emit();
   }
-
 }
