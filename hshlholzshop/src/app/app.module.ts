@@ -44,6 +44,7 @@ import { UserComponent } from './components/user/user.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationComponent } from './shared/registration/registration.component';
 import { LoginComponent } from './shared/login/login.component';
+import { LandingLoginRegistrationComponent } from './shared/landing-login-registration/landing-login-registration.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { LoginComponent } from './shared/login/login.component';
     ProductListComponent,
     UserComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    LandingLoginRegistrationComponent
   ],
   imports: [
     NgImageSliderModule,
