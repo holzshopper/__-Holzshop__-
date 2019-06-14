@@ -7,7 +7,6 @@ export class Customer extends User {
     this.id = id;
     this.email = email;
     this.password = password;
-    this.is_admin = false;
     this.can_login = true;
   }
 }
