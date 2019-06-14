@@ -42,9 +42,7 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { UserComponent } from './components/user/user.component';
 import { FormsModule } from '@angular/forms';
-import { RegistrationComponent } from './shared/registration/registration.component';
 import { LoginComponent } from './shared/login/login.component';
-import { LandingLoginRegistrationComponent } from './shared/landing-login-registration/landing-login-registration.component';
 
 @NgModule({
   declarations: [
@@ -53,9 +51,7 @@ import { LandingLoginRegistrationComponent } from './shared/landing-login-regist
     ProductPageComponent,
     ProductListComponent,
     UserComponent,
-    RegistrationComponent,
-    LoginComponent,
-    LandingLoginRegistrationComponent
+    LoginComponent
   ],
   imports: [
     NgImageSliderModule,

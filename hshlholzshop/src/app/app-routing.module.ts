@@ -7,8 +7,6 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './shared/login/login.component';
-import { RegistrationComponent } from './shared/registration/registration.component';
-import { LandingLoginRegistrationComponent } from './shared/landing-login-registration/landing-login-registration.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -16,7 +14,6 @@ const routes: Routes = [
   { path: 'product/:id', component: ProductPageComponent },
   { path: 'user/:id', component: UserComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'registration', component: RegistrationComponent},
   { path: 'login', component: LoginComponent}
 ];
 
