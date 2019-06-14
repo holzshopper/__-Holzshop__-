@@ -1,26 +1,31 @@
 <div class="columns">
-    <div class="column is-1 is-offset-1 is-gapless" style="background-color: cadetblue">
+    <div class="column is-1" style="background-color: cadetblue">
         <div style="height: 100px; width: 100%;background-color: blueviolet">Logo</div>
     </div>
-    <div class="column is-9" style="background-color: chartreuse">
-        <input mat-input>
-        <button mat-button>Search</button>
-        <button mat-button>Shopping Card</button>
-        <button mat-button routerLink="/login">Login/Register</button>
+    <div class="column is-10" style="background-color: chartreuse">
+        <div class="columns">
+            <div class="column is 12">
+                <input mat-input>
+                <button mat-button>Search</button>
+                <button mat-button>Shopping Card</button>
+                <button mat-button routerLink="/login">Login/Register</button>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column is-12" style="background-color:burlywood">
+                <mat-toolbar>
+                    <button mat-button routerLink="">Startseite</button>
+                    <button mat-button routerLink="">Möbel</button>
+                    <button mat-button routerLink="">Holz</button>
+                    <button mat-button routerLink="">Zubehör</button>
+                </mat-toolbar>
+            </div>
+        </div>
     </div>
 </div>
+
 <div class="columns">
-    <div class="column is-10 is-offset-1">
-        <mat-toolbar>
-            <button mat-button routerLink="">Startseite</button>
-            <button mat-button routerLink="">Möbel</button>
-            <button mat-button routerLink="">Holz</button>
-            <button mat-button routerLink="">Zubehör</button>
-        </mat-toolbar>
-    </div>
-</div>
-<div class="columns">
-    <div class="column is-10 is-offset-1" style="background-color: cornflowerblue">
+    <div class="column is-12" style="background-color: cornflowerblue">
         <router-outlet></router-outlet>
     </div>
 </div>

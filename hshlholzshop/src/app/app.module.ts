@@ -38,24 +38,18 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ProductFilterComponent } from './shared/components/product-filter/product-filter.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { UserComponent } from './components/user/user.component';
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './shared/components/login/login.component';
-import { RegistrationComponent } from './shared/components/registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    ProductFilterComponent,
     ProductPageComponent,
     ProductListComponent,
-    UserComponent,
-    LoginComponent,
-    RegistrationComponent
+    UserComponent
   ],
   imports: [
     NgImageSliderModule,
