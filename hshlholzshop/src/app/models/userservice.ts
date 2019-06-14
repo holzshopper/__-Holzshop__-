@@ -1,7 +1,7 @@
 import { Output, EventEmitter } from '@angular/core';
 import { User } from '../models/user';
 import { Customer } from './customer';
-import { Admin } from './admit';
+import { Admin } from './admin';
 
 export class UserService {
   private objects: User[] = [
