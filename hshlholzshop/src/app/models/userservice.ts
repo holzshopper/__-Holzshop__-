@@ -1,10 +1,9 @@
 import { Output, EventEmitter } from '@angular/core';
 import { User } from '../models/user';
-import { Customer } from './customer';
 
 export class UserService {
   private objects: User[] = [
-    new Customer( 1, 'will.kaufen@example.com', 'konsum1!')
+    new User( 1, 'will.kaufen@example.com', 'konsum1!')
   ];
 
   @Output() changed = new EventEmitter();

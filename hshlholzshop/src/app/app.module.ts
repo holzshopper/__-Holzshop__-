@@ -43,6 +43,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { UserComponent } from './components/user/user.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './shared/login/login.component';
+import { Loginregistrationservice } from './models/Loginregistrationservice';
+import { UserService } from './models/userservice';
 
 @NgModule({
   declarations: [
@@ -92,7 +94,10 @@ import { LoginComponent } from './shared/login/login.component';
     MatPaginatorModule
 
   ],
-  providers: [],
+  providers: [
+    Loginregistrationservice,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

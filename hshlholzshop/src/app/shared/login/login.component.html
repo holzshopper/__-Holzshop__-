@@ -4,26 +4,32 @@
     <form>
       <div class="form-group">
         <label for="email">Email: </label>
-        <input type="text" class="form-control" id="email_login">
+        <input type="text" class="form-control" id="email_login" #emaillogin>
       </div>
       <div class="form-group">
         <label for="password">Password: </label>
-        <input type="password" class="form-control" id="password_login">
+        <input type="password" class="form-control" id="password_login" #passwordlogin>
+      </div>
+      <div class="form-group">
+        <button type="submit" (click)="onSubmit(emaillogin,passwordlogin)">Bestätigen</button>
       </div>
     </form>
   </div>
   <div class="column">
     <div class="form-group">
         <label for="email">Email: </label>
-        <input type="text" class="form-control" id="email_registration">
+        <input type="text" class="form-control" id="email_registration" #emailregistration>
       </div>
       <div class="form-group">
         <label for="password">Password: </label>
-        <input type="password" class="form-control" id="password_registration">
+        <input type="password" class="form-control" id="password_registration" #passwordregistration>
       </div>
       <div>
         <label for="password">Password wiederholen: </label>
-        <input type="password" class="form-control" id="password_registration_1">
+        <input type="password" class="form-control" id="password_registration_1" #passwordregistration1>
+      </div>
+      <div class="form-group">
+        <button type="submit" (click)="onSubmitRegistration(emailregistration,passwordregistration, passwordregistration1)">Bestätigen</button>
       </div>
   </div>
 </div>
