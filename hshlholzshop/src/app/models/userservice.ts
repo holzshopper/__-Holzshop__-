@@ -70,10 +70,14 @@ export class UserService {
       const new_id = Math.max.apply(Math, this.objects.map(function(o) {return o.id; })) + 1;
       obj.id = new_id;
       this.objects.push(obj);
-      console.log('Registrierung erfolgreich');
-    } else {
-      console.log('Die von Ihnen verwendete Emailadresse existiert bereits');
     }
     this.changed.emit();
+  }
+
+  createUser(email: string, password: string) {
+    let obj: User;
+    obj.email = email;
+    obj.password = password;
+    this.saveNewUser(obj);
   }
 }

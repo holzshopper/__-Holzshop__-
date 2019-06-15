@@ -24,9 +24,22 @@ export class LoginComponent implements OnInit {
 
   onSubmitRegistration(email: HTMLInputElement, password: HTMLInputElement, password1: HTMLInputElement) {
     if (password.value === password1.value) {
-      console.log('Stimmt');
+      if (this.validateEmail(email)) {
+        if (this.service.emailExists(email.value)) {
+          console.log('Email ist bereits registriert');
+        } else {
+          this.service.registerUser(email.value, password.value);
+          console.log('Registrierung erfolgreich');
+        }
+      } else {
+        console.log('Keine korrekte Email');
+      }
     } else {
-      console.log('Stimmt nicht');
+      console.log(' Passwörter stimmen nicht überein');
     }
+  }
+
+  validateEmail(email: HTMLInputElement) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
   }
 }

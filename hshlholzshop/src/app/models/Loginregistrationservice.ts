@@ -20,4 +20,14 @@ export class Loginregistrationservice {
   isLoggedIn() {
     return this.current_user != null;
   }
+
+  emailExists(email: string) {
+    return this.service.getUserByEmail(email) !== null;
+  }
+
+  registerUser(email: string, password: string) {
+    this.service.createUser(email, password);
+  }
+
+
 }
