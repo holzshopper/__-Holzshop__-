@@ -1,3 +1,38 @@
-<p>
-  product-page works!
-</p>
+
+<mat-grid-list  cols = "4" rowHeight = "100px">
+  <mat-grid-tile style="background-color: white"
+  [colspan] = "1"
+  [rowspan] = "3"><img [src]="imagePath">
+  </mat-grid-tile>
+  <mat-grid-tile style="background-color: red"
+  [colspan] = "3"
+  [rowspan] = "1"><div class="HeaderText LeftAl">
+    <p>Title</p>
+  </div>
+  </mat-grid-tile>
+  <mat-grid-tile style="background-color: grey"
+  [colspan] = "2"
+  [rowspan] = "2"><div class="LeftAl">
+    <p>Facts</p>
+  </div>
+  </mat-grid-tile>
+  <mat-grid-tile style="background-color: yellow"
+  [colspan] = "1"
+  [rowspan] = "1"><div class="LeftAl" >
+      <p>Preis</p>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile style="background-color: brown"
+  [colspan] = "1"
+  [rowspan] = "1"><div class="LeftAl" >
+    <p>Einkaufswagen</p>
+  </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile  style="background-color: wheat"
+  [colspan] = "4"
+  [rowspan] = "1"> <p>hr|</p><p>Beschreibung</p>
+</mat-grid-tile>
+
+
+</mat-grid-list>
