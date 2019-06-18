@@ -15,7 +15,8 @@ export class ProductPageComponent implements OnInit {
  
   }
 
-  imagePath='./assets/img/holz.jpg';
+  imagePath='.src/assets/img/holz.jpg';
+  //src\assets\img\holz.jpg
   //title="Test";
 
 
