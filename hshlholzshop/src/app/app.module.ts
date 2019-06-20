@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-
 // Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material';
@@ -40,11 +39,14 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductMiniComponent } from './components/product-mini/product-mini.component';
 import { UserComponent } from './components/user/user.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './shared/login/login.component';
 import { Loginregistrationservice } from './models/Loginregistrationservice';
 import { UserService } from './models/userservice';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { UserService } from './models/userservice';
     ProductPageComponent,
     ProductListComponent,
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    ProductMiniComponent
   ],
   imports: [
     NgImageSliderModule,
@@ -96,6 +99,7 @@ import { UserService } from './models/userservice';
   ],
   providers: [
     Loginregistrationservice,
+    CookieService,
     UserService
   ],
   bootstrap: [AppComponent]
