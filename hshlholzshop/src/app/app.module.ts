@@ -36,6 +36,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgImageSliderModule } from 'ng-image-slider';
+
+// Components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { ProductListComponent } from './components/product-list/product-list.component';

@@ -12,7 +12,7 @@ import { ProductMiniComponent } from './components/product-mini/product-mini.com
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'products', component: ProductListComponent },
-  { path: 'product/:id', component: ProductPageComponent },
+  { path: 'product', component: ProductPageComponent },
   { path: 'user/:id', component: UserComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent},
