@@ -32,6 +32,4 @@ export class Loginregistrationservice {
     this.service.createUser(email, password);
     console.log('Register User used');
   }
-
-
 }
