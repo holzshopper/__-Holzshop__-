@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material';
-import {MatButtonModule} from '@angular/material';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -48,6 +48,7 @@ import { LoginComponent } from './shared/login/login.component';
 import { Loginregistrationservice } from './models/Loginregistrationservice';
 import { UserService } from './models/userservice';
 import { CookieService } from 'ngx-cookie-service';
+import { ProductFilterComponent } from './shared/product-filter/product-filter.component';
 
 
 @NgModule({
