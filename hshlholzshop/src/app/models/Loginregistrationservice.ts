@@ -10,14 +10,17 @@ export class Loginregistrationservice {
 
   login(email: string, password: string) {
     this.current_user = this.service.checkUserData(email, password);
+    this.current_user.can_login = false;
     return this.isLoggedIn();
   }
 
   logout() {
+    this.current_user.can_login = true;
     this.current_user = null;
   }
 
   isLoggedIn() {
+    this.current_user.can_login = false;
     return this.current_user != null;
   }
 
@@ -27,6 +30,7 @@ export class Loginregistrationservice {
 
   registerUser(email: string, password: string) {
     this.service.createUser(email, password);
+    console.log('Register User used');
   }
 
 
