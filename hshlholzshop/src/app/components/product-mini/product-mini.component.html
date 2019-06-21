@@ -1,0 +1,23 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><p [textContent]="cTitle">Test</p></mat-card-title>
+    <mat-card-subtitle>Holzprodukt</mat-card-subtitle>
+  </mat-card-header>
+  <a href="product/1"><img mat-card-image [src]="imgSrc" [alt]="imgAlt"></a>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item><p [textContent]="fact1">test</p></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item><p [textContent]="fact2">test</p></mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item><p [textContent]="fact3">test</p></mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+
+      <mat-list-item><button mat-button>Zum Produkt</button></mat-list-item>
+      <mat-list-item><button mat-button>In den Einkaufswagen</button></mat-list-item>
+    
+    
+  </mat-card-actions>
+</mat-card>

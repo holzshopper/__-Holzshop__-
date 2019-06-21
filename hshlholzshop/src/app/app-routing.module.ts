@@ -7,14 +7,16 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './shared/login/login.component';
+import { ProductMiniComponent } from './components/product-mini/product-mini.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'products', component: ProductListComponent },
-  { path: 'product/:id', component: ProductPageComponent },
+  { path: 'product', component: ProductPageComponent },
   { path: 'user/:id', component: UserComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'login', component: LoginComponent}
+  { path: 'login', component: LoginComponent},
+  { path: 'test', component: ProductMiniComponent}
 ];
 
 @NgModule({
