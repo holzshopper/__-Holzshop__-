@@ -9,6 +9,8 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class ProductFilterComponent implements OnInit {
   filter: FormGroup;
+  @Output() messageEvent = new EventEmitter<string>();
+  tester: string ="hurensohn";
   hoelzer: Holz[] = [
     {value: null, viewValue: 'Alle'},
     {value: 'Buche', viewValue: 'Buche'},
@@ -23,13 +25,12 @@ export class ProductFilterComponent implements OnInit {
     {value: 'rund', viewValue: 'Rund'},
     {value: 'oval', viewValue: 'Oval'},
   ];
-  @Output() messageEvent = new EventEmitter<FormGroup>()
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-
-    this.filter = this.fb.group({
+   this.tester='das ist ein Test'
+   this.filter = this.fb.group({
       BilderrahmenRechteckig: false,
       BilderrahmenQuadratisch: false,
       BilderrahmenKantenRund: false,
@@ -80,11 +81,61 @@ export class ProductFilterComponent implements OnInit {
     this.filter.valueChanges.subscribe(console.log);
     this.filter.valueChanges.subscribe(this.sendMessage)
   }
-
-  sendMessage(){
-    this.messageEvent.emit(this.filter)
+  sendMessage() {
+    this.messageEvent.emit(this.tester)
   }
+  onReset() {
+    console.log('mongo');
+    this.sendMessage();
+    this.filter.setValue({BilderrahmenRechteckig: false,
+      BilderrahmenQuadratisch: false,
+      BilderrahmenKantenRund: false,
+      FußbödenRechteckig: false,
+      FußbödenQuadratisch: false,
+      TischRechteckig: false,
+      TischQuadratisch: false,
+      TischOvalförmig: false,
+      TischKreisförmig: false,
+      TischKantenRund: false,
+      TischPlätze: null,
+      BänkePlätze: null,
+      BänkeFüße: null,
+      StühleMitLehne: false,
+      StühleOhneLehne: false,
+      StühleRunderSitz: false,
+      StühleEckigerSitz: false,
+      BettenMinBreite: 0,
+      BettenMaxBreite: 500,
+      BettenMinLänge: 0,
+      BettenMaxLänge: 500,
+      BettenEnde: null,
+      RegalMinBreite: 0,
+      RegalMaxBreite: 500,
+      RegalMinLänge: 0,
+      RegalMaxLänge: 500,
+      RegalMinHöhe: 0,
+      RegalMaxHöhe: 500,
+      RegalAnzahlFächer: null,
+      SchrankMinBreite: 0,
+      SchrankMaxBreite: 500,
+      SchrankMinLänge: 0,
+      SchrankMaxLänge: 500,
+      SchrankMinHöhe: 0,
+      SchrankMaxHöhe: 500,
+      SchrankAnzahlFächer: null,
+      SchrankKleiderhacken: null,
+      SchrankTür: null,
+      BauholzRund: false,
+      BauholzEckig: false,
+      BauholzBretter: false,
+      ZubehörFarbe: false,
+      ZubehörLack: false,
+      PreisMin: 0,
+      PreisMax: 10000000000,
+      Holzart: null});
 
+
+  }
 }
 
 

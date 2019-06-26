@@ -1,12 +1,23 @@
 <p>
-  product-list works!
+{{filter}}
 
 </p>
-
-    <p *ngFor="let test of tests">
+<div style="width:100%; display:table">
+  <div style="display:table-row">
+  <div style="width:400px;display:table-cell;"><app-product-filter (messageEvent)="receiveMessage($event)"></app-product-filter>  </div>
+  <div style="display:table-cell;">
+    <!---<p *ngFor="let test of tests">
       {{ test }}
+
     </p>
     <p>
         product-list works!
-      
-      </p>
+
+      </p></div>--->
+    <app-product-mini></app-product-mini>
+
+  </div>
+
+</div>
+
+

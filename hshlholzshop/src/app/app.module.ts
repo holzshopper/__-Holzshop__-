@@ -43,7 +43,7 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductMiniComponent } from './components/product-mini/product-mini.component';
 import { UserComponent } from './components/user/user.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule , FormsModule } from '@angular/forms';
 import { LoginComponent } from './shared/login/login.component';
 import { Loginregistrationservice } from './models/Loginregistrationservice';
 import { UserService } from './models/userservice';
@@ -59,9 +59,11 @@ import { ProductFilterComponent } from './shared/product-filter/product-filter.c
     ProductListComponent,
     UserComponent,
     LoginComponent,
+    ProductFilterComponent,
     ProductMiniComponent
   ],
   imports: [
+    ReactiveFormsModule,
     NgImageSliderModule,
     AppRoutingModule,
     BrowserModule,

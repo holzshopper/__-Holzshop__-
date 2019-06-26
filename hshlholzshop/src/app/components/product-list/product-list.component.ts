@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from "@angular/common";
+import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -10,10 +11,12 @@ export class ProductListComponent implements OnInit {
   tests=['asdf','test','xd']
 
   constructor() { }
-
+  filter: string;
   ngOnInit() {
   }
-
+  receiveMessage($event) {
+    this.filter= $event;
+  }
 
 
 }
