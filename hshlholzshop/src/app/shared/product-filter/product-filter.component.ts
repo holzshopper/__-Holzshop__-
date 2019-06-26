@@ -9,7 +9,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class ProductFilterComponent implements OnInit {
   filter: FormGroup;
-  @Output() messageEvent = new EventEmitter<string>();
+  @Output() messageEvent = new EventEmitter<FormGroup>();
   tester: string ="hurensohn";
   hoelzer: Holz[] = [
     {value: null, viewValue: 'Alle'},
@@ -78,14 +78,16 @@ export class ProductFilterComponent implements OnInit {
       PreisMax: 10000000000,
       Holzart: null,
       });
-    this.filter.valueChanges.subscribe(console.log);
-    this.filter.valueChanges.subscribe(this.sendMessage)
+    this.filter.valueChanges.subscribe(console.log,this.sendMessage);
+
+    this.sendMessage();
+
   }
   sendMessage() {
-    this.messageEvent.emit(this.tester)
+    console.log('test');
+    this.messageEvent.emit(this.filter);
   }
-  onReset() {
-    console.log('mongo');
+   onReset() {
     this.sendMessage();
     this.filter.setValue({BilderrahmenRechteckig: false,
       BilderrahmenQuadratisch: false,

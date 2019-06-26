@@ -11,11 +11,11 @@ export class ProductListComponent implements OnInit {
   tests=['asdf','test','xd']
 
   constructor() { }
-  filter: string;
+  filter: FormGroup;
   ngOnInit() {
   }
   receiveMessage($event) {
-    this.filter= $event;
+    this.filter = $event;
   }
 
 
