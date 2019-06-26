@@ -3,7 +3,7 @@ import { User } from '../models/user';
 
 export class UserService {
   private objects: User[] = [
-    new User( 1, 'will.kaufen@example.com', 'konsum1!')
+    new User(1, 'will.kaufen@example.com', 'konsum1!')
   ];
 
   @Output() changed = new EventEmitter();
@@ -65,19 +65,22 @@ export class UserService {
   }
 
   saveNewUser(obj: User) {
-    const index = this.indexEmail(obj.email);
+    const index = this.getUserByEmail(obj.email);
     if (index === null) {
-      const new_id = Math.max.apply(Math, this.objects.map(function(o) {return o.id; })) + 1;
-      obj.id = new_id;
       this.objects.push(obj);
     }
+    console.log(String(this.objects.length));
     this.changed.emit();
   }
 
   createUser(email: string, password: string) {
-    let obj: User;
-    obj.email = email;
-    obj.password = password;
+    const id = this.getMaxId();
+    let obj = new User(id, email, password);
     this.saveNewUser(obj);
+    console.log('Create User used');
+  }
+
+  getMaxId() {
+    return Math.max.apply(Math, this.objects.map(function(o) {return o.id; })) + 1;
   }
 }
