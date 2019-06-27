@@ -8,8 +8,16 @@ import { OfferArticle } from 'src/app/shared/models/offerArticle';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  objects = ['0','1','2','3','4','5','6','7']
+  objects:OfferArticle[]
+  constructor(private service: OfferArticleService) { }
   ngOnInit() {
+    this.getOfferArticles()
+    console.log(this.objects)
+  }
+
+  getOfferArticles(): void {
+    this.service.getOfferArticle()
+        .subscribe(objects => this.objects = objects);
   }
 
 }

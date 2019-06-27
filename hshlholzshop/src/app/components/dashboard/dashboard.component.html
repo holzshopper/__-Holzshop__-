@@ -2,8 +2,8 @@
     <div *ngFor="let item of objects" class="column is-3">
         <mat-card class="offerBox">
             <mat-card-content class="offerContent">
-                <img src="https://picsum.photos/id/237/3000/3000">
-                <div class="offerDescription leftAlign">ProduktName</div><div class="offerDescription"><b>129€ </b> <s>140€</s></div> 
+                <img src="{{item.img}}">
+                <div class="offerDescription leftAlign">{{item.name}}</div><div class="offerDescription"><b>{{item.newPrice}}€ </b> <s>{{item.oldPrice}}€</s></div> 
             </mat-card-content>
         </mat-card>
     </div>
@@ -28,9 +28,21 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus semper vulputate. Fusce id tortor ac
             orci pharetra vehicula ac eu elit. Fusce justo lorem, venenatis eget dolor a, fringilla pellentesque turpis.
             Vivamus dapibus eros tincidunt, pulvinar leo sit amet, pellentesque justo. Integer viverra mi eu ipsum
-            aliquam egestas. Suspendisse eleifend ipsum id auctor tempor. Morbi turpis magna, varius non rutrum egestas,
+            aliquam egestas. Etiam nec sem at diam mollis iaculis. Duis convallis eu dui quis aliquet. Donec id vestibulum enim. 
+            Phasellus viverra augue a purus luctus gravida. Cras arcu urna, aliquet et tempus ut, convallis et velit. Maecenas accumsan purus vel nulla ultricies elementum. 
+            Duis vel felis quis arcu viverra sagittis. Duis efficitur justo in nisi fermentum, ac aliquet nibh dignissim. Phasellus mollis, dui vitae luctus bibendum, 
+            eros ipsum sodales elit, ut dictum mi arcu sed ligula.
+            <br>
+            <img class="pic" src="https://picsum.photos/id/190/600/300">
+            <br>
+            Suspendisse eleifend ipsum id auctor tempor. Morbi turpis magna, varius non rutrum egestas,
             tempor et dolor. Nullam in nisl in mi gravida hendrerit at eget arcu. In hac habitasse platea dictumst.
             Nulla diam tortor, elementum a lacus nec, blandit egestas enim. In mollis vulputate porta. Nunc in
-            ullamcorper ante.</p>
+            ullamcorper ante. Etiam nec sem at diam mollis iaculis. Duis convallis eu dui quis aliquet. Donec id vestibulum enim. 
+            Phasellus viverra augue a purus luctus gravida. Cras arcu urna, aliquet et tempus ut, convallis et velit. Maecenas accumsan purus vel nulla ultricies elementum. 
+            Duis vel felis quis arcu viverra sagittis. Duis efficitur justo in nisi fermentum, ac aliquet nibh dignissim. Phasellus mollis, dui vitae 
+            luctus bibendum, eros ipsum sodales elit, ut dictum mi arcu sed ligula.
+
+        </p>
     </div>
 </div>
