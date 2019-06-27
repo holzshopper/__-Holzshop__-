@@ -1,12 +1,18 @@
-<p>
-  product-list works!
+<p style="display: none">
+{{filter.value|json}}
 
 </p>
+<div style="width:100%; display:table">
+  <div style="display:table-row">
+  <div style="width:400px;display:table-cell;"><app-product-filter (messageEvent)="receiveMessage($event)"></app-product-filter>  </div>
 
-    <p *ngFor="let test of tests">
-      {{ test }}
-    </p>
-    <p>
-        product-list works!
-      
-      </p>
+    <div *ngFor="let id of ProductIDs">
+        <div style="display:table-cell;"></div>
+          <app-product-mini [id]="id" ></app-product-mini>
+      </div>
+    </div>
+  
+  </div>
+
+
+

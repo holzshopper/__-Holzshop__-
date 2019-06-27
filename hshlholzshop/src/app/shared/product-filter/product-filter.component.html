@@ -1,0 +1,281 @@
+<div style="text-align:left">
+  <form [formGroup] = "filter">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title id="title-Panel">
+          Bilderrahmen
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+
+    <mat-checkbox class="checkboxes"  formControlName="BilderrahmenRechteckig" >Rechteckig</mat-checkbox>
+    <br>
+    <mat-checkbox class="checkboxes" formControlName="BilderrahmenQuadratisch">Quadratisch</mat-checkbox>
+    <br>
+    <h2>Kanten</h2>
+
+    <mat-checkbox class="checkboxes" formControlName="BilderrahmenKantenRund">abbgerundet</mat-checkbox>
+
+
+
+    </mat-expansion-panel>
+    <mat-expansion-panel >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Fußböden
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      <mat-checkbox class="checkboxes" formControlName="FußbödenRechteckig">Rechteckig</mat-checkbox>
+      <br>
+      <mat-checkbox class="checkboxes" formControlName="FußbödenQuadratisch">Quadratisch</mat-checkbox>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Tische</mat-panel-title>
+      </mat-expansion-panel-header>
+      <h2>Form</h2>
+      <mat-checkbox class="checkboxes" formControlName="TischRechteckig">Rechteckig</mat-checkbox>
+      <br>
+      <mat-checkbox class="checkboxes" formControlName="TischQuadratisch">Quadratisch</mat-checkbox>
+      <br>
+      <mat-checkbox class="checkboxes" formControlName="TischOvalförmig">Ovalförmig</mat-checkbox>
+      <br>
+      <mat-checkbox class="checkboxes" formControlName="TischKreisförmig">Kreisförmig</mat-checkbox>
+      <br><br>
+      <h2>Kanten</h2><br>
+
+      <mat-checkbox class="checkboxes" formControlName="TischKantenRund">abbgerundet</mat-checkbox><br><br>
+      Mindestanzahl von Sitzplätzen<br>
+      <mat-form-field class="textfelder">
+        <input type="number" matInput placeholder="Mindestanzahl von Sitzplätzen" formControlName="TischPlätze">
+      </mat-form-field>
+
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Bänke</mat-panel-title>
+      </mat-expansion-panel-header>
+      <h2>Sitzplätze</h2><br>
+      <mat-form-field class="textfelder">
+        <input type="number" matInput placeholder="Sitzplätze" formControlName="BänkePlätze">
+      </mat-form-field>
+      <br>
+      <h2>Füße</h2>
+      <br>
+      <mat-form-field class="textfelder">
+
+        <input type="number" matInput placeholder="Füße" formControlName="BänkeFüße">
+      </mat-form-field>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Stühle</mat-panel-title>
+      </mat-expansion-panel-header>
+      <h2>Lehnen</h2><br>
+      <mat-checkbox class="checkboxes">Mit Lehne</mat-checkbox><br>
+      <mat-checkbox class="checkboxes">Ohne Lehne</mat-checkbox><br>
+      <br>
+      <h2>Sitzfläche</h2>
+      <br>
+      <mat-checkbox class="checkboxes">Rund</mat-checkbox><br>
+      <mat-checkbox class="checkboxes">Eckig</mat-checkbox><br>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Betten
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+        <h2>Breite</h2><br>
+        <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="min" value="0">
+
+            <span matSuffix>cm</span>
+
+          </mat-form-field>
+
+          <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="max" value="100000">
+
+            <span matSuffix>cm</span>
+          </mat-form-field><br>
+        <h2>Länge</h2><br>
+        <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="min" value="0">
+
+            <span matSuffix>cm</span>
+
+          </mat-form-field>
+
+          <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="max" value="100000">
+
+            <span matSuffix>cm</span>
+          </mat-form-field><br>
+          <h2>Bettende</h2><br>
+          <mat-form-field class="textfelder">
+              <mat-label>Bettende</mat-label>
+              <mat-select formControlName="BettenEnde">
+                <mat-option *ngFor="let bettende of bettenden"
+                [value]="bettende.value">{{bettende.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Regal
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+                <h2>Breite</h2><br>
+                <mat-form-field class="textfelder">
+                    <input type="number" matInput placeholder="min" value="0" formControlName="RegalMinBreite">
+
+                    <span matSuffix>cm</span>
+
+                  </mat-form-field>
+
+                  <mat-form-field class="textfelder">
+                    <input type="number" matInput placeholder="max" value="100000" formControlName="RegalMaxBreite">
+
+                    <span matSuffix>cm</span>
+                  </mat-form-field><br>
+                <h2>Länge</h2><br>
+                <mat-form-field class="textfelder">
+                    <input type="number" matInput placeholder="min" value="0" formControlName="RegalMinLänge">
+
+                    <span matSuffix>cm</span>
+
+                  </mat-form-field>
+
+                  <mat-form-field class="textfelder">
+                    <input type="number" matInput placeholder="max" value="100000" formControlName="RegalMaxLänge">
+
+                    <span matSuffix>cm</span>
+                  </mat-form-field><br>
+                  <br>
+                  <h2>Höhe</h2><br>
+                  <mat-form-field class="textfelder">
+                      <input type="number" matInput placeholder="min" value="0" formControlName="RegalMinHöhe">
+
+                      <span matSuffix>cm</span>
+
+                    </mat-form-field>
+
+                    <mat-form-field class="textfelder">
+                      <input type="number" matInput placeholder="max" value="100000" formControlName="RegalMaxHöhe">
+
+                      <span matSuffix>cm</span>
+                    </mat-form-field><br>
+                  <h2>Anzahl der Fächer</h2>
+                  <mat-form-field class="textfelder">
+                    <input type="number" matInput placeholder="Anzahl" formControlName="RegalAnzahlFächer">
+                  </mat-form-field><br>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Schrank
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+        <h2>Breite</h2><br>
+        <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="min" value="0" formControlName="SchrankMinBreite">
+
+            <span matSuffix>cm</span>
+
+          </mat-form-field>
+
+          <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="max" value="100000" formControlName="SchrankMaxBreite">
+
+            <span matSuffix>cm</span>
+          </mat-form-field><br>
+        <h2>Länge</h2><br>
+        <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="min" value="0" formControlName="SchrankMinLänge">
+
+            <span matSuffix>cm</span>
+
+          </mat-form-field>
+
+          <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="max" value="100000" formControlName="SchrankMaxLänge">
+
+            <span matSuffix>cm</span>
+          </mat-form-field><br>
+          <br>
+          <h2>Höhe</h2><br>
+          <mat-form-field class="textfelder">
+              <input type="number" matInput placeholder="min" value="0" formControlName="SchrankMinHöhe">
+
+              <span matSuffix>cm</span>
+
+            </mat-form-field>
+
+            <mat-form-field class="textfelder">
+              <input type="number" matInput placeholder="max" value="100000" formControlName="SchrankMaxHöhe">
+
+              <span matSuffix>cm</span>
+            </mat-form-field><br>
+          <h2>Anzahl der Fächer</h2><br>
+          <mat-form-field class="textfelder">
+            <input type="number" matInput placeholder="Anzahl" formControlName="SchrankAnzahlFächer">
+          </mat-form-field><br>
+          <mat-checkbox class="checkboxes" formControlName="SchrankKleiderhacken">Kleiderhacken</mat-checkbox><br>
+          <mat-form-field class="textfelder">
+            <mat-label>Türen</mat-label>
+            <select matNativeControl required formControlName="SchrankTür">
+              <option value="Holztür">Holz</option>
+              <option value="Glasstür">Glasstür</option>
+            </select>
+          </mat-form-field>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Bauholz
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-checkbox class="checkboxes" formControlName="BauholzRund">Runde Stangen</mat-checkbox><br>
+      <mat-checkbox class="checkboxes" formControlName="BauholzEckig">Eckige Stangen</mat-checkbox><br>
+      <mat-checkbox class="checkboxes" formControlName="BauholzBretter">Bretter</mat-checkbox><br>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Zubehör
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-checkbox class="checkboxes" formControlName="ZubehörFarbe">Farbe</mat-checkbox><br>
+      <mat-checkbox class="checkboxes" formControlName="ZubehörLack">Lack</mat-checkbox><br>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <h2>Preis in €</h2><br>
+  <mat-form-field class="textfelder" >
+    <input type="number" matInput placeholder="min" value="0" formControlName="PreisMin" >
+
+    <span matSuffix>.00€&nbsp;</span>
+
+  </mat-form-field>
+
+  <mat-form-field class="textfelder" >
+    <input id="textfeld" type="number" matInput placeholder="max" value="100000" formControlName="PreisMax">
+
+    <span matSuffix>.00€&nbsp;</span>
+  </mat-form-field><br>
+  <mat-form-field class="textfelder">
+    <mat-label>Holzart</mat-label>
+    <mat-select formControlName="Holzart">
+      <mat-option *ngFor="let holz of hoelzer"
+      [value]="holz.value">{{holz.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field><br>
+  <button class="buttonReset" mat-button (click)="onReset()">Reset</button>
+  </form>
+</div>

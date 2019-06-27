@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCheckboxModule} from '@angular/material';
-import {MatButtonModule} from '@angular/material';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -43,11 +43,12 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductMiniComponent } from './components/product-mini/product-mini.component';
 import { UserComponent } from './components/user/user.component';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule , FormsModule } from '@angular/forms';
 import { LoginComponent } from './shared/login/login.component';
 import { Loginregistrationservice } from './models/Loginregistrationservice';
 import { UserService } from './models/userservice';
 import { CookieService } from 'ngx-cookie-service';
+import { ProductFilterComponent } from './shared/product-filter/product-filter.component';
 
 
 @NgModule({
@@ -58,9 +59,11 @@ import { CookieService } from 'ngx-cookie-service';
     ProductListComponent,
     UserComponent,
     LoginComponent,
+    ProductFilterComponent,
     ProductMiniComponent
   ],
   imports: [
+    ReactiveFormsModule,
     NgImageSliderModule,
     AppRoutingModule,
     BrowserModule,
