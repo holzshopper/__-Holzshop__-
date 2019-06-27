@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Loginregistrationservice } from './models/Loginregistrationservice';
+import { Loginregistrationservice } from 'src/app/shared/services/Loginregistrationservice';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,5 +14,5 @@ export class AppComponent implements OnInit {
     this.isLoggedIn = this.service.isLoggedIn()
     console.log(this.isLoggedIn)
   }
-  
+
 }
