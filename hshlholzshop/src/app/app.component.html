@@ -1,5 +1,5 @@
 <div class="columns">
-    <div class="column is-10 is-offset-1" style="background-color: chartreuse">
+    <div class="column is-10 is-offset-1 header" >
         <div class="columns">
             <div class="column is-3">
                 <img src="./../assets/img/branding/logo.svg" style="max-height: 100px; max-width: 100%;">
@@ -9,9 +9,24 @@
                 <i class="fas fa-shopping-cart"></i> Shopping Card</button>
                 <button mat-button routerLink="./login">Login/Register</button>
             </div>
+            <div class="column is-9">
+                <div class="columns">
+                    <div class="column is-9 is-offset-7">
+                        <button mat-flat-button color="primary" class="button-header"> Shopping Card</button>
+                        <button mat-flat-button color="primary" class="button-header" routerLink="./login">Login/Register</button>
+                    </div>
+
+                    </div>
+                <div class="columns">
+                    <div class="column is-offset-0">
+                        <input mat-input style="width: 300px; height: 40px">
+                        <button mat-button>Search</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="columns">
-            <div class="column is-12" style="background-color:burlywood">
+            <div class="column is-12" class="navbar">
                 <button mat-button routerLink="">Startseite</button>
                 <button mat-button routerLink="">Möbel</button>
                 <button mat-button routerLink="">Holz</button>
@@ -20,17 +35,17 @@
         </div>
     </div>
 </div>
-
 <div class="columns">
     <div class="column is-10 is-offset-1" style="background-color: cornflowerblue">
+    <div class="column is-10 is-offset-1">
         <router-outlet></router-outlet>
     </div>
 </div>
 
 <div class="columns">
-        <div class="column is-10 is-offset-1" style="background-color: coral">
-            Hallo ich bin der Footer Impressum und so.
-        </div>
+    <div class="column is-10 is-offset-1 footer">
+        Hallo ich bin der Footer Impressum und so.
     </div>
+</div>
 
 
