@@ -1,4 +1,4 @@
-import { User } from './user';
+import { User } from '../models/user';
 import { Injectable } from '@angular/core';
 import { UserService } from './userservice';
 // import * as firebase from 'firebase';

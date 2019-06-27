@@ -1,37 +1,41 @@
-
 <div class="columns">
   <div class="column is-12" id="column">
     <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Emailadresse" type="text" id="email_login" #emaillogin>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Passwort" type="password" id="password_login" #passwordlogin>
-      </mat-form-field>
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Emailadresse" type="text" id="email_login" #emaillogin>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Passwort" type="password" id="password_login" #passwordlogin>
+        </mat-form-field>
+      </div>
       <div class="form-group">
         <button mat-flat-button color="primary" type="submit" (click)="onSubmit(emaillogin,passwordlogin)">Login</button>
       </div>
     </form>
   </div>
-
-
   <div class="column is-12" id="column">
     <form class="example-form">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Emailadresse" type="text" id="email_registration" #emailregistration>
-      </mat-form-field>
-      <mat-form-field class="example-full-width" class="form-group">
-        <input matInput placeholder="Passwort" type="password" id="password_registration" #passwordregistration>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Passwort wiederholen" type="password" id="password_registration_1" #passwordregistration1>
-      </mat-form-field>
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Emailadresse" type="text" id="email_registration" #emailregistration>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width" class="form-group">
+          <input matInput placeholder="Passwort" type="password" id="password_registration" #passwordregistration>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Passwort wiederholen" type="password" id="password_registration_1" #passwordregistration1>
+        </mat-form-field>
+      </div>
       <div class="form-group">
         <button mat-flat-button color="primary" type="submit" (click)="onSubmitRegistration(emailregistration,passwordregistration, passwordregistration1)">Registrieren</button>
       </div>
       </form>
   </div>
-
-
 </div>
-

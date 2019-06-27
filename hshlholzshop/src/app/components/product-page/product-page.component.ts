@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from 'src/app/models/Article';
+import { Article } from 'src/app/shared/models/Article';
 import { CookieService } from 'ngx-cookie-service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,7 +11,7 @@ import { AngularFirestoreModule, AngularFirestore } from "@angular/fire/firestor
   styleUrls: ['./product-page.component.scss']
 })
 export class ProductPageComponent implements OnInit {
-  
+
 
 
   private article:Article;
@@ -23,20 +23,20 @@ export class ProductPageComponent implements OnInit {
   item1Text="Fact";
   item2Text="Fact";
   item3Text="Fact";
-  
-  id: string;
-  
 
-  constructor(private cookieService: CookieService,private route: ActivatedRoute) { 
+  id: string;
+
+
+  constructor(private cookieService: CookieService,private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
       this.id = params['id'];
-     
+
   });
   }
   addToCardClick(){
   this.cookieService.set('ShoppingCard',this.cookieService.get('ShoppingCard')+this.article.id+",");
   }
-  
+
   callback(me:ProductPageComponent,article:Article){
     me.pTitle=article.title;
     me.imagePath=article.imgUrl;

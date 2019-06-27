@@ -45,8 +45,8 @@ import { ProductMiniComponent } from './components/product-mini/product-mini.com
 import { UserComponent } from './components/user/user.component';
 import { ReactiveFormsModule , FormsModule } from '@angular/forms';
 import { LoginComponent } from './shared/login/login.component';
-import { Loginregistrationservice } from './models/Loginregistrationservice';
-import { UserService } from './models/userservice';
+import { Loginregistrationservice } from './shared/services/Loginregistrationservice';
+import { UserService } from './shared/services/userservice';
 import { CookieService } from 'ngx-cookie-service';
 import { ProductFilterComponent } from './shared/product-filter/product-filter.component';
 

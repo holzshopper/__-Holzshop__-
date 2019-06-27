@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Article } from 'src/app/models/Article';
+import { Article } from 'src/app/shared/models/Article';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductPageComponent } from '../product-page/product-page.component';
 import { CookieService } from 'ngx-cookie-service';
@@ -12,7 +12,7 @@ import { CookieService } from 'ngx-cookie-service';
   styleUrls: ['./product-mini.component.scss']
 })
 export class ProductMiniComponent implements OnInit {
- 
+
 @Input()id:string;
 
   cTitle="";
@@ -23,10 +23,10 @@ export class ProductMiniComponent implements OnInit {
   fact3="preis";
 
   private Router:Router;
-  constructor(private cookieService: CookieService,private route: Router) { 
+  constructor(private cookieService: CookieService,private route: Router) {
     this.Router=route;
   }
-  
+
   toProduct(){
     this.Router.navigate(['product'], { queryParams: { id: this.id } });
   }
@@ -44,9 +44,9 @@ export class ProductMiniComponent implements OnInit {
   ngOnInit() {
     var tmp= new Article(this.id);
     tmp.generateData(this,this.test);
- 
+
   }
- 
+
 
 
 
