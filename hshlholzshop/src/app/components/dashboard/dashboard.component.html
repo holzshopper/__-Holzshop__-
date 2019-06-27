@@ -1,34 +1,9 @@
-<div class="columns">
-    <div class="column is-3">
-        
+<div class="columns is-multiline">
+    <div *ngFor="let item of objects" class="column is-3">
         <mat-card class="offerBox">
-            <mat-card-content>
+            <mat-card-content class="offerContent">
                 <img src="https://picsum.photos/id/237/3000/3000">
-                <p>129,00 € 140,00 €</p>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div class="column is-3">
-        <mat-card class="offerBox">
-            <mat-card-content>
-                <img src="https://picsum.photos/id/238/3000/3000">
-                <p>129,00 € 140,00 €</p>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div class="column is-3">
-        <mat-card class="offerBox" routerLink="./../login">
-            <mat-card-content>
-                <img src="https://picsum.photos/id/239/3000/3000">
-                <p>129,00 € 140,00 €</p>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div class="column is-3">
-        <mat-card class="offerBox" routerLink="./../login">
-            <mat-card-content>
-                <img src="https://picsum.photos/id/240/3000/3000">
-                <p>129,00 € 140,00 €</p>
+                <div class="offerDescription leftAlign">ProduktName</div><div class="offerDescription"><b>129€ </b> <s>140€</s></div> 
             </mat-card-content>
         </mat-card>
     </div>
@@ -36,14 +11,26 @@
 <mat-divider></mat-divider>
 <div class="columns">
     <div class="column is-12 text">
-        <h1 class="mat-display-1">Über uns</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus semper vulputate. Fusce id tortor ac orci pharetra vehicula ac eu elit. Fusce justo lorem, venenatis eget dolor a, fringilla pellentesque turpis. Vivamus dapibus eros tincidunt, pulvinar leo sit amet, pellentesque justo. Integer viverra mi eu ipsum aliquam egestas. Suspendisse eleifend ipsum id auctor tempor. Morbi turpis magna, varius non rutrum egestas, tempor et dolor. Nullam in nisl in mi gravida hendrerit at eget arcu. In hac habitasse platea dictumst. Nulla diam tortor, elementum a lacus nec, blandit egestas enim. In mollis vulputate porta. Nunc in ullamcorper ante.</p>
+        <h1 class="mat-display-1 headline">Über uns</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus semper vulputate. Fusce id tortor ac
+            orci pharetra vehicula ac eu elit. Fusce justo lorem, venenatis eget dolor a, fringilla pellentesque turpis.
+            Vivamus dapibus eros tincidunt, pulvinar leo sit amet, pellentesque justo. Integer viverra mi eu ipsum
+            aliquam egestas. Suspendisse eleifend ipsum id auctor tempor. Morbi turpis magna, varius non rutrum egestas,
+            tempor et dolor. Nullam in nisl in mi gravida hendrerit at eget arcu. In hac habitasse platea dictumst.
+            Nulla diam tortor, elementum a lacus nec, blandit egestas enim. In mollis vulputate porta. Nunc in
+            ullamcorper ante.</p>
     </div>
 </div>
 <mat-divider></mat-divider>
 <div class="columns">
     <div class="column is-12 text">
-        <h1 h1 class="mat-display-1">Nachhaltigkeit</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus semper vulputate. Fusce id tortor ac orci pharetra vehicula ac eu elit. Fusce justo lorem, venenatis eget dolor a, fringilla pellentesque turpis. Vivamus dapibus eros tincidunt, pulvinar leo sit amet, pellentesque justo. Integer viverra mi eu ipsum aliquam egestas. Suspendisse eleifend ipsum id auctor tempor. Morbi turpis magna, varius non rutrum egestas, tempor et dolor. Nullam in nisl in mi gravida hendrerit at eget arcu. In hac habitasse platea dictumst. Nulla diam tortor, elementum a lacus nec, blandit egestas enim. In mollis vulputate porta. Nunc in ullamcorper ante.</p>
+        <h1 h1 class="mat-display-1 headline">Nachhaltigkeit</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus semper vulputate. Fusce id tortor ac
+            orci pharetra vehicula ac eu elit. Fusce justo lorem, venenatis eget dolor a, fringilla pellentesque turpis.
+            Vivamus dapibus eros tincidunt, pulvinar leo sit amet, pellentesque justo. Integer viverra mi eu ipsum
+            aliquam egestas. Suspendisse eleifend ipsum id auctor tempor. Morbi turpis magna, varius non rutrum egestas,
+            tempor et dolor. Nullam in nisl in mi gravida hendrerit at eget arcu. In hac habitasse platea dictumst.
+            Nulla diam tortor, elementum a lacus nec, blandit egestas enim. In mollis vulputate porta. Nunc in
+            ullamcorper ante.</p>
     </div>
 </div>
