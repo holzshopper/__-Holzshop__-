@@ -8,7 +8,9 @@
                 <div class="columns">
                     <div class="column is-9 is-offset-7">
                         <button mat-flat-button color="primary" class="button-header"> Shopping Card</button>
-                        <button mat-flat-button color="primary" class="button-header" routerLink="./login">Login/Register</button>
+                        <div *ngIf="isLoggedIn; else MyAccout"><button mat-flat-button color="primary" class="button-header" routerLink="./login">Login/Register</button></div>
+                            <ng-template #MyAccout><button mat-flat-button color="primary" class="button-header" routerLink="./login">Mein Konto</button></ng-template>
+                        
                     </div>
                     </div>
                 <div class="columns">
@@ -19,16 +21,19 @@
                 </div>
             </div>
         </div>
-        <div class="columns">
-            <div class="column is-12" class="navbar">
-                <button mat-button routerLink="">Startseite</button>
-                <button mat-button routerLink="">Möbel</button>
-                <button mat-button routerLink="">Holz</button>
-                <button mat-button routerLink="">Zubehör</button>
-            </div>
-        </div>
     </div>
 </div>
+<div class="columns">
+    <div class="column is-10 is-offset-1">
+        <div class="navbar">
+            <button mat-button routerLink="">Startseite</button>
+            <button mat-button routerLink="">Möbel</button>
+            <button mat-button routerLink="">Holz</button>
+            <button mat-button routerLink="">Zubehör</button>
+        </div> 
+    </div>
+</div>
+
 <div class="columns">
     <div class="column is-10 is-offset-1">
         <router-outlet></router-outlet>
@@ -37,7 +42,10 @@
 
 <div class="columns">
     <div class="column is-10 is-offset-1 footer">
-        Hallo ich bin der Footer Impressum und so.
+        <div>
+            Hallo ich bin der Footer Impressum und so.
+        </div>
+        
     </div>
 </div>
 
