@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { OfferArticleService } from 'src/app/shared/services/offer-article.service'
+import { OfferArticle } from 'src/app/shared/models/offerArticle';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  constructor() { }
   ngOnInit() {
   }
 
