@@ -8,24 +8,6 @@ export class UserService {
 
   @Output() changed = new EventEmitter();
 
-  private index(id: number) {
-    for (let i = 0; i < this.objects.length; i++) {
-      if (this.objects[i].id === id) {
-        return i;
-      }
-    }
-    return -1;
-  }
-
-  getUserById(id: number): User {
-    const index = this.index(id);
-    if (index !== -1) {
-      return this.objects[index];
-    } else {
-      return null;
-    }
-  }
-
   private indexEmail(email: string) {
     for (let i = 0; i < this.objects.length; i++) {
       if (this.objects[i].email.toUpperCase() === email.toUpperCase()) {
