@@ -1,22 +1,20 @@
 <div class="columns">
-    <div class="column is-10 is-offset-1 header" >
+    <div class="column is-10 is-offset-1 header">
         <div class="columns">
             <div class="column is-3">
                 <img src="./../assets/img/branding/logo.svg" style="max-height: 100px; max-width: 100%;">
             </div>
             <div class="column is-9">
                 <div class="columns">
-                    <div class="column is-9 is-offset-7">
-                        <button mat-flat-button color="primary" class="button-header"> Shopping Card</button>
-                        <div *ngIf="isLoggedIn; else MyAccout"><button mat-flat-button color="primary" class="button-header" routerLink="./login">Login/Register</button></div>
-                            <ng-template #MyAccout><button mat-flat-button color="primary" class="button-header" routerLink="./login">Mein Konto</button></ng-template>
-                        
-                    </div>
-                    </div>
-                <div class="columns">
-                    <div class="column is-offset-0">
-                        <input mat-input placeholder="Suche nach Produkten" class="search-input">
-                        <button mat-button>Search</button>
+                    <div class="column is-12 is-offset-0" style="position: relative; ">
+                        <div style="float: right">
+                            <button mat-flat-button color="primary" class="button-header"> Shopping Card</button>
+                            <div *ngIf="isLoggedIn; then login else MyAccout"></div>
+                            <ng-template #login><button mat-flat-button color="primary"
+                                class="button-header" routerLink="./login">Login/Register</button></ng-template>
+                            <ng-template #MyAccout><button mat-flat-button color="primary" class="button-header"
+                                routerLink="./login">Mein Konto</button></ng-template>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,7 +28,7 @@
             <button mat-button routerLink="">Möbel</button>
             <button mat-button routerLink="">Holz</button>
             <button mat-button routerLink="">Zubehör</button>
-        </div> 
+        </div>
     </div>
 </div>
 
@@ -40,13 +38,10 @@
     </div>
 </div>
 
-<div class="columns">
-    <div class="column is-10 is-offset-1 footer">
-        <div>
-            Hallo ich bin der Footer Impressum und so.
-        </div>
-        
+<div class="columns is-gapless">
+    <div class="column is-1"></div>
+    <div class="column is-10 footer">
+        <br>
+        <p>Impressum | Datenschutzerklärung | Allgemeine Geschäftsbedingungen | Lieferbestimmungen</p>
     </div>
 </div>
-
-
