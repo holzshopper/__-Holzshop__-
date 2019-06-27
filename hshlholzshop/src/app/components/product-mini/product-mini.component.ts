@@ -13,37 +13,37 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class ProductMiniComponent implements OnInit {
 
-@Input()id:string;
+  @Input() id: string;
 
-  cTitle="";
-  imgAlt="article";
-  imgSrc="./assets/img/holz.jpg";
-  fact1="123";
-  fact2="123";
-  fact3="preis";
+  cTitle = "";
+  imgAlt = "article";
+  imgSrc = "./assets/img/holz.jpg";
+  fact1 = "123";
+  fact2 = "123";
+  fact3 = "preis";
 
-  private Router:Router;
-  constructor(private cookieService: CookieService,private route: Router) {
-    this.Router=route;
+  private Router: Router;
+  constructor(private cookieService: CookieService, private route: Router) {
+    this.Router = route;
   }
 
-  toProduct(){
+  toProduct() {
     this.Router.navigate(['product'], { queryParams: { id: this.id } });
   }
-  addToCard(){
-    this.cookieService.set('ShoppingCard',this.cookieService.get('ShoppingCard')+this.id+",");
+  addToCard() {
+    this.cookieService.set('ShoppingCard', this.cookieService.get('ShoppingCard') + this.id + ",");
   }
 
-  private test(sender:ProductMiniComponent,Article:Article){
-    sender.cTitle=Article.title;
-    sender.fact1=Article.Holzart;
-    sender.fact2=Article.Abmessungen;
-    sender.fact3=Article.preis;
+  private test(sender: ProductMiniComponent, Article: Article) {
+    sender.cTitle = Article.title;
+    sender.fact1 = Article.Holzart;
+    sender.fact2 = Article.Abmessungen;
+    sender.fact3 = Article.preis;
   }
 
   ngOnInit() {
-    var tmp= new Article(this.id);
-    tmp.generateData(this,this.test);
+    var tmp = new Article(this.id);
+    tmp.generateData(this, this.test);
 
   }
 

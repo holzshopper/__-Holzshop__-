@@ -15,44 +15,44 @@ import 'firebase/firestore';
 })
 export class ProductListComponent implements OnInit {
 
-  tests=['asdf','test','xd'];
 
-  ProductIDs=[];
+
+  ProductIDs = [];
 
   constructor() { }
   filter: FormGroup;
   ngOnInit() {
   }
 
-  getIDs(test:firebase.firestore.Firestore){
+  getIDs(test: firebase.firestore.Firestore) {
     var collection;
-    
-    if(this.filter.get('Moebelstueck')==null|| this.filter.get('Moebelstueck').value==null){
-      collection=test.collection("product");
+
+    if (this.filter.get('Moebelstueck') == null || this.filter.get('Moebelstueck').value == null) {
+      collection = test.collection("product");
     }
-    else{
-      collection=test.collection("product").where('Holzart','==',this.filter.get('Holzart').value);
-      collection= collection.where('Moebelstueck','==',this.filter.get('Moebelstueck').value);
-      collection= collection.where('Preis','>=',this.filter.get('PreisMin').value);
-      collection= collection.where('Preis','<=',this.filter.get('PreisMax').value);
+    else {
+      collection = test.collection("product").where('Holzart', '==', this.filter.get('Holzart').value);
+      collection = collection.where('Moebelstueck', '==', this.filter.get('Moebelstueck').value);
+      collection = collection.where('Preis', '>=', this.filter.get('PreisMin').value);
+      collection = collection.where('Preis', '<=', this.filter.get('PreisMax').value);
     }
-    
-    var _this = this;  
-    var counter=0;
-    collection.get().then(function(collection){
-        collection.docs.forEach(doc=> {
-          _this.ProductIDs[counter]=doc.id
-          counter++;
-        }); 
+
+    var _this = this;
+    var counter = 0;
+    collection.get().then(function (collection) {
+      collection.docs.forEach(doc => {
+        _this.ProductIDs[counter] = doc.id
+        counter++;
       });
-     console.log(this.ProductIDs);
+    });
+    console.log(this.ProductIDs);
   }
 
   receiveMessage($event) {
     this.filter = $event;
-    
 
-   
+
+
     const firebaseConfig = {
       apiKey: "AIzaSyDOrM9hNNOUR_iDUjYUnZZAw-lKdPSLtWM",
       authDomain: "web-frontends-5d5f6.firebaseapp.com",
@@ -62,12 +62,12 @@ export class ProductListComponent implements OnInit {
       messagingSenderId: "699028735290",
       appId: "1:699028735290:web:79da7dd3ccf61fb8"
     };
-    if (!firebase.apps.length) 
-    firebase.initializeApp(firebaseConfig);
+    if (!firebase.apps.length)
+      firebase.initializeApp(firebaseConfig);
 
- 
-    var test3=firebase.firestore();
-    this.getIDs(test3) ; 
+
+    var test3 = firebase.firestore();
+    this.getIDs(test3);
 
 
   }

@@ -1,61 +1,57 @@
-
-<mat-grid-list  cols = "4" rowHeight = "100px">
-  <mat-grid-tile class="TitleClass"
-  [colspan] = "1"
-  [rowspan] = "3"><img [src]="imagePath">
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile class="TitleClass" [colspan]="1" [rowspan]="3"><img [src]="imagePath">
   </mat-grid-tile>
-  <mat-grid-tile class="TitleClass" 
-  [colspan] = "3"
-  [rowspan] = "1"><div class="HeaderText LeftAl">
-    <p [textContent]="pTitle">Title</p>
-  </div>
+  <mat-grid-tile class="TitleClass" [colspan]="3" [rowspan]="1">
+    <div class="HeaderText LeftAl">
+      <p [textContent]="pTitle">Title</p>
+    </div>
   </mat-grid-tile>
-  <mat-grid-tile style="background-color: lightgray"
-  [colspan] = "2"
-  [rowspan] = "2"><div class="LeftAl widthMax">
-   <mat-list>
-  <mat-list-item><p [textContent]="item1Text">Test</p></mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item><p [textContent]="item2Text">Test</p></mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item><p [textContent]="item3Text">Test</p></mat-list-item>
-</mat-list>
-  </div>
+  <mat-grid-tile style="background-color: lightgray" [colspan]="2" [rowspan]="2">
+    <div class="LeftAl widthMax">
+      <mat-list>
+        <mat-list-item>
+          <p [textContent]="item1Text">Test</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <p [textContent]="item2Text">Test</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <p [textContent]="item3Text">Test</p>
+        </mat-list-item>
+      </mat-list>
+    </div>
   </mat-grid-tile>
-  <mat-grid-tile style="background-color: yellowgreen"
-  [colspan] = "1"
-  [rowspan] = "1">
-  <div class="LeftAl" >
-     
-   
-        <p class="Preis"[textContent]="preisValue">Preis</p>
-
-  </div>
+  <mat-grid-tile style="background-color: yellowgreen" [colspan]="1" [rowspan]="1">
+    <div class="LeftAl">
+      <p class="Preis" [textContent]="preisValue">Preis</p>
+    </div>
   </mat-grid-tile>
-  <mat-grid-tile style="background-color: yellowgreen"
-  [colspan] = "1"
-  [rowspan] = "1"><div class="LeftAl" >
-    <p Class="CardText">Einkaufswagen</p>
-    <button mat-button class="CardButton" (click)="addToCardClick()">In den Einkaufswagen</button>
-  </div>
+  <mat-grid-tile style="background-color: yellowgreen" [colspan]="1" [rowspan]="1">
+    <div class="LeftAl">
+      <p Class="CardText">Einkaufswagen</p>
+      <button mat-button class="CardButton" (click)="addToCardClick()">In den Einkaufswagen</button>
+    </div>
   </mat-grid-tile>
 
-  <mat-grid-tile  class="DescBlockHead"
-  [colspan] = "4"
-  [rowspan] = "1">
+  <mat-grid-tile class="DescBlockHead" [colspan]="4" [rowspan]="1">
 
-  <mat-list class="widthMax ">
+    <mat-list class="widthMax ">
       <mat-divider></mat-divider>
-      <mat-list-item><div><p class="DescHead">Beschreibung</p></div></mat-list-item>
+      <mat-list-item>
+        <div>
+          <p class="DescHead">Beschreibung</p>
+        </div>
+      </mat-list-item>
       <mat-divider></mat-divider>
-  
+
     </mat-list>
-</mat-grid-tile>
-<mat-grid-tile class="DescBlockBody"
-[colspan] = "4"
-[rowspan] = "1"><div class="LeftAl">
-  <p [textContent]="beschreibungText">TEXT</p>
-</div>
-</mat-grid-tile>
+  </mat-grid-tile>
+  <mat-grid-tile class="DescBlockBody" [colspan]="4" [rowspan]="1">
+    <div class="LeftAl">
+      <p [textContent]="beschreibungText">TEXT</p>
+    </div>
+  </mat-grid-tile>
 
 </mat-grid-list>
