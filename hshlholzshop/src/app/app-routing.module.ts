@@ -8,6 +8,12 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './shared/login/login.component';
 import { ProductMiniComponent } from './components/product-mini/product-mini.component';
+import { ProductFilterComponent} from './shared/product-filter/product-filter.component';
+
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -16,7 +22,8 @@ const routes: Routes = [
   { path: 'user/:id', component: UserComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent},
-  { path: 'test', component: ProductMiniComponent}
+  { path: 'test', component: ProductMiniComponent},
+  { path: 'filter', component: ProductFilterComponent}
 ];
 
 @NgModule({
