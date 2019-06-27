@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/app/models/Article';
 import { CookieService } from 'ngx-cookie-service';
+import { ActivatedRoute } from '@angular/router';
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule, AngularFirestore } from "@angular/fire/firestore";
@@ -10,6 +11,7 @@ import { AngularFirestoreModule, AngularFirestore } from "@angular/fire/firestor
   styleUrls: ['./product-page.component.scss']
 })
 export class ProductPageComponent implements OnInit {
+  
 
 
   private article:Article;
@@ -21,23 +23,33 @@ export class ProductPageComponent implements OnInit {
   item1Text="Fact";
   item2Text="Fact";
   item3Text="Fact";
+  
+  id: string;
+  
 
-  constructor(private cookieService: CookieService) { 
-
+  constructor(private cookieService: CookieService,private route: ActivatedRoute) { 
+    this.route.queryParams.subscribe(params => {
+      this.id = params['id'];
+     
+  });
   }
   addToCardClick(){
   this.cookieService.set('ShoppingCard',this.cookieService.get('ShoppingCard')+this.article.id+",");
-  this.pTitle=this.cookieService.get('ShoppingCard');
   }
   
-  ngOnInit() {
-    this.article= new Article();
+  callback(me:ProductPageComponent,article:Article){
+    me.pTitle=article.title;
+    me.imagePath=article.imgUrl;
+    me.preisValue=article.preis;
+    me.beschreibungText=article.beschreibung;
+    me.item1Text=article.Abmessungen;
+    me.item2Text=article.Holzart;
+    me.item3Text=article.Moebelstueck;
+  }
 
-    this.pTitle=this.article.title;
-    this.imagePath=this.article.imgUrl;
-    this.preisValue=this.article.preis;
-    this.beschreibungText=this.article.beschreibung;
-    
+  ngOnInit() {
+    this.article= new Article(this.id);
+    this.article.generateData(this,this.callback)
   }
 
 

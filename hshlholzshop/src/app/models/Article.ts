@@ -11,6 +11,9 @@ export class Article {
     public preis:string;
     public beschreibung:string;
     public imgUrl:string;
+    public Moebelstueck:string;
+    public Holzart:string;
+    public Abmessungen:string;
 
     ProductIDs=[];
 
@@ -38,7 +41,10 @@ export class Article {
         var _this = this;  
         test3.collection("product").doc(this.id).get().then(function(doc){
             _this.title=doc.get('Title');
-            _this.preis=doc.get('Preis');    
+            _this.preis="Preis: "+doc.get('Preis')+" €";    
+            _this.Abmessungen=doc.get('Abmessungen');   
+            _this.Holzart=doc.get('Holzart');   
+            _this.Moebelstueck=doc.get('Moebelstueck'); 
             _this.beschreibung=doc.get('Desc'); 
             callback(sender,_this);   
           });
