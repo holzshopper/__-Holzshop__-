@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Article } from 'src/app/models/Article';
 
 
 
@@ -9,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductMiniComponent implements OnInit {
  
+@Input()id:string;
+
   cTitle="";
   imgAlt="article";
   imgSrc="./assets/img/holz.jpg";
@@ -19,8 +22,14 @@ export class ProductMiniComponent implements OnInit {
     
   }
   
+  private test(sender:ProductMiniComponent,Article:Article){
+    sender.cTitle=Article.title;
+  }
+
   ngOnInit() {
-    this.cTitle="TestTitle";
+    var tmp= new Article(this.id);
+    tmp.generateData(this,this.test);
+ 
   }
  
 

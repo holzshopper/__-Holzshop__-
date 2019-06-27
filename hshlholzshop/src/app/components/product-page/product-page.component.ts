@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/app/models/Article';
 import { CookieService } from 'ngx-cookie-service';
 
-
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule, AngularFirestore } from "@angular/fire/firestore";
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
@@ -21,7 +22,7 @@ export class ProductPageComponent implements OnInit {
   item2Text="Fact";
   item3Text="Fact";
 
-  constructor( private cookieService: CookieService) { 
+  constructor(private cookieService: CookieService) { 
 
   }
   addToCardClick(){
