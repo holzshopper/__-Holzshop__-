@@ -1,11 +1,11 @@
-<mat-card class="example-card">
+<mat-card style="background-color: lightblue">
   <mat-card-header>
-    <mat-card-title>
+    <mat-card-title class="HeaderBorderHead">
       <p [textContent]="cTitle">Test</p>
     </mat-card-title>
-    <mat-card-subtitle>Holzprodukt</mat-card-subtitle>
+    <mat-card-subtitle class="HeaderBorderBody">Holzprodukt</mat-card-subtitle>
   </mat-card-header>
-  <a href="product/1"><img mat-card-image [src]="imgSrc" [alt]="imgAlt"></a>
+  <a class="img" href="product/1"><img mat-card-image [src]="imgSrc" [alt]="imgAlt"></a>
   <mat-card-content>
     <mat-list>
       <mat-list-item>
@@ -23,8 +23,8 @@
   </mat-card-content>
   <mat-card-actions>
 
-    <mat-list-item><button mat-button (click)="toProduct()">Zum Produkt</button></mat-list-item>
-    <mat-list-item><button mat-button (click)="addToCard()">In den Einkaufswagen</button></mat-list-item>
+    <mat-list-item><button class="BtnClass" mat-button (click)="toProduct()">Zum Produkt</button></mat-list-item>
+    <mat-list-item><button class="BtnClass" mat-button (click)="addToCard()">In den Einkaufswagen</button></mat-list-item>
 
 
   </mat-card-actions>

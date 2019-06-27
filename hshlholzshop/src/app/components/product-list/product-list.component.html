@@ -2,16 +2,18 @@
   {{filter.value|json}}
 
 </p>
-<div style="width:100%; display:table">
-  <div style="display:table-row">
-    <div style="width:400px;display:table-cell;">
-      <app-product-filter (messageEvent)="receiveMessage($event)"></app-product-filter>
-    </div>
 
-    <div *ngFor="let id of ProductIDs">
+
+<mat-grid-list cols="3" rowheight="Fit">
+  <mat-grid-tile  [colspan]="1" [rowspan]="2"> 
+    <app-product-filter (messageEvent)="receiveMessage($event)">    
+    </app-product-filter>
+  </mat-grid-tile>
+ 
+      <mat-grid-tile [rowspan]="2" *ngFor="let id of ProductIDs"  >
       <div style="display:table-cell;"></div>
       <app-product-mini [id]="id"></app-product-mini>
-    </div>
-  </div>
-
-</div>
+    </mat-grid-tile>
+  
+ 
+</mat-grid-list>
