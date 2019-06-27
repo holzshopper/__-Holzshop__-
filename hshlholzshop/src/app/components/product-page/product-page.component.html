@@ -4,13 +4,13 @@
   [colspan] = "1"
   [rowspan] = "3"><img [src]="imagePath">
   </mat-grid-tile>
-  <mat-grid-tile style="background-color: red"
+  <mat-grid-tile style="background-color: chartreuse"
   [colspan] = "3"
   [rowspan] = "1"><div class="HeaderText LeftAl">
     <p [textContent]="pTitle">Title</p>
   </div>
   </mat-grid-tile>
-  <mat-grid-tile style="background-color: grey"
+  <mat-grid-tile style="background-color: coral"
   [colspan] = "2"
   [rowspan] = "2"><div class="LeftAl widthMax">
    <mat-list>
@@ -22,36 +22,36 @@
 </mat-list>
   </div>
   </mat-grid-tile>
-  <mat-grid-tile style="background-color: yellow"
+  <mat-grid-tile style="background-color: yellowgreen"
   [colspan] = "1"
   [rowspan] = "1">
   <div class="LeftAl" >
      
    
-        <p [textContent]="preisValue">Preis</p>
+        <p class="Preis"[textContent]="preisValue">Preis</p>
 
   </div>
   </mat-grid-tile>
-  <mat-grid-tile style="background-color: brown"
+  <mat-grid-tile style="background-color: yellowgreen"
   [colspan] = "1"
   [rowspan] = "1"><div class="LeftAl" >
-    <p>Einkaufswagen</p>
+    <p Class="CardText">Einkaufswagen</p>
     <button mat-button class="CardButton" (click)="addToCardClick()">In den Einkaufswagen</button>
   </div>
   </mat-grid-tile>
 
-  <mat-grid-tile  style="background-color: wheat"
+  <mat-grid-tile  style="background-color: burlywood"
   [colspan] = "4"
   [rowspan] = "1">
 
   <mat-list class="widthMax ">
       <mat-divider></mat-divider>
-      <mat-list-item><div>Beschreibung</div></mat-list-item>
+      <mat-list-item><div><p class="DescHead">Beschreibung</p></div></mat-list-item>
       <mat-divider></mat-divider>
   
     </mat-list>
 </mat-grid-tile>
-<mat-grid-tile style="background-color: red"
+<mat-grid-tile style="background-color: burlywood"
 [colspan] = "4"
 [rowspan] = "1"><div class="LeftAl">
   <p [textContent]="beschreibungText">TEXT</p>
