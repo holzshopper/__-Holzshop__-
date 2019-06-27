@@ -14,42 +14,42 @@ export class ProductPageComponent implements OnInit {
 
 
 
-  private article:Article;
-  pTitle="default";
-  imagePath="default";
-  preisValue="default";
-  beschreibungText="default";
+  private article: Article;
+  pTitle = "default";
+  imagePath = "default";
+  preisValue = "default";
+  beschreibungText = "default";
 
-  item1Text="Fact";
-  item2Text="Fact";
-  item3Text="Fact";
+  item1Text = "Fact";
+  item2Text = "Fact";
+  item3Text = "Fact";
 
   id: string;
 
 
-  constructor(private cookieService: CookieService,private route: ActivatedRoute) {
+  constructor(private cookieService: CookieService, private route: ActivatedRoute) {
     this.route.queryParams.subscribe(params => {
       this.id = params['id'];
 
-  });
+    });
   }
-  addToCardClick(){
-  this.cookieService.set('ShoppingCard',this.cookieService.get('ShoppingCard')+this.article.id+",");
+  addToCardClick() {
+    this.cookieService.set('ShoppingCard', this.cookieService.get('ShoppingCard') + this.article.id + ",");
   }
 
-  callback(me:ProductPageComponent,article:Article){
-    me.pTitle=article.title;
-    me.imagePath=article.imgUrl;
-    me.preisValue=article.preis;
-    me.beschreibungText=article.beschreibung;
-    me.item1Text=article.Abmessungen;
-    me.item2Text=article.Holzart;
-    me.item3Text=article.Moebelstueck;
+  callback(me: ProductPageComponent, article: Article) {
+    me.pTitle = article.title;
+    me.imagePath = article.imgUrl;
+    me.preisValue = article.preis;
+    me.beschreibungText = article.beschreibung;
+    me.item1Text = article.Abmessungen;
+    me.item2Text = article.Holzart;
+    me.item3Text = article.Moebelstueck;
   }
 
   ngOnInit() {
-    this.article= new Article(this.id);
-    this.article.generateData(this,this.callback)
+    this.article = new Article(this.id);
+    this.article.generateData(this, this.callback)
   }
 
 
