@@ -33,8 +33,8 @@ export class ProductListComponent implements OnInit {
     else {
       collection = test.collection("product").where('Holzart', '==', this.filter.get('Holzart').value);
       collection = collection.where('Moebelstueck', '==', this.filter.get('Moebelstueck').value);
-      collection = collection.where('Preis', '>=', this.filter.get('PreisMin').value);
-      collection = collection.where('Preis', '<=', this.filter.get('PreisMax').value);
+      //collection = collection.where('Preis', '>=', this.filter.get('PreisMin').value);
+      //collection = collection.where('Preis', '<=', this.filter.get('PreisMax').value);
     }
 
     var _this = this;

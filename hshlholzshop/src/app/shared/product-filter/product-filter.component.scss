@@ -19,6 +19,15 @@ div{
   font-size:10px;
 
 }
+.radiogroup{
+direction: flex;
+flex-direction: column;
+margin:15px 0;
+.radiobutton{
+
+  margin:5px
+}
+}
 h2{
 padding-top:3px;
 font-size: 14px;

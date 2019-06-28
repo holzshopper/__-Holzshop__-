@@ -10,7 +10,8 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class ProductFilterComponent implements OnInit {
   filter: FormGroup;
   @Output() messageEvent = new EventEmitter<FormGroup>();
-  tester: string ="hurensohn";
+
+  moebels: string[] = ['Stuhl', 'Schrank', 'Tisch', 'Regal','Bett',];
   hoelzer: Holz[] = [
     {value: null, viewValue: 'Alle'},
     {value: 'Buche', viewValue: 'Buche'},
@@ -29,9 +30,10 @@ export class ProductFilterComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-   this.tester='das ist ein Test'
-   this.filter = this.fb.group({
-      BilderrahmenRechteckig: false,
+
+  this.filter = this.fb.group({
+      Moebelstueck: null,
+     /* BilderrahmenRechteckig: false,
       BilderrahmenQuadratisch: false,
       BilderrahmenKantenRund: false,
       FußbödenRechteckig: false,
@@ -73,7 +75,7 @@ export class ProductFilterComponent implements OnInit {
       BauholzEckig: false,
       BauholzBretter: false,
       ZubehörFarbe: false,
-      ZubehörLack: false,
+      ZubehörLack: false,*/
       PreisMin: 0,
       PreisMax: 10000000000,
       Holzart: null,
@@ -87,9 +89,14 @@ export class ProductFilterComponent implements OnInit {
     console.log('test');
     this.messageEvent.emit(this.filter);
   }
-   onReset() {
+  onFilter() {
     this.sendMessage();
-    this.filter.setValue({BilderrahmenRechteckig: false,
+  }
+   onReset() {
+
+       this.filter.setValue({
+      Moebelstueck: null,
+      /*BilderrahmenRechteckig: false,
       BilderrahmenQuadratisch: false,
       BilderrahmenKantenRund: false,
       FußbödenRechteckig: false,
@@ -131,10 +138,11 @@ export class ProductFilterComponent implements OnInit {
       BauholzEckig: false,
       BauholzBretter: false,
       ZubehörFarbe: false,
-      ZubehörLack: false,
+      ZubehörLack: false,*/
       PreisMin: 0,
       PreisMax: 10000000000,
       Holzart: null});
+      this.sendMessage();
 
 
   }

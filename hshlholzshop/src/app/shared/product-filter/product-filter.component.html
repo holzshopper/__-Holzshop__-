@@ -1,6 +1,14 @@
 <div style="text-align:left">
   <form [formGroup] = "filter">
-  <mat-accordion>
+    <mat-radio-group class="radiogroup" formControlName="Moebelstueck">
+      <mat-radio-button class="radiobutton" *ngFor="let moebel of moebels" [value]="moebel">
+        {{moebel}}
+      </mat-radio-button><br>
+
+    </mat-radio-group>
+
+
+  <!--<mat-accordion>
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title id="title-Panel">
@@ -254,7 +262,7 @@
       <mat-checkbox class="checkboxes" formControlName="ZubehörFarbe">Farbe</mat-checkbox><br>
       <mat-checkbox class="checkboxes" formControlName="ZubehörLack">Lack</mat-checkbox><br>
     </mat-expansion-panel>
-  </mat-accordion>
+  </mat-accordion> -->
   <h2>Preis in €</h2><br>
   <mat-form-field class="textfelder" >
     <input type="number" matInput placeholder="min" value="0" formControlName="PreisMin" >
@@ -276,6 +284,7 @@
       </mat-option>
     </mat-select>
   </mat-form-field><br>
+  <button class="buttonReset" mat-button (click)="onFilter()">Update</button>
   <button class="buttonReset" mat-button (click)="onReset()">Reset</button>
   </form>
 </div>
