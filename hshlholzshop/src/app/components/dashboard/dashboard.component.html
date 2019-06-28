@@ -1,6 +1,6 @@
 <div class="columns is-multiline">
     <div *ngFor="let item of objects" class="column is-3">
-        <mat-card class="offerBox">
+        <mat-card class="offerBox" routerLink="./../product">
             <mat-card-content class="offerContent">
                 <img src="{{item.img}}">
                 <div class="offerDescription leftAlign">{{item.name}}</div><div class="offerDescription"><b>{{item.newPrice}}€ </b> <s>{{item.oldPrice}}€</s></div> 

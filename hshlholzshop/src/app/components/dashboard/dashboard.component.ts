@@ -12,7 +12,6 @@ export class DashboardComponent implements OnInit {
   constructor(private service: OfferArticleService) { }
   ngOnInit() {
     this.getOfferArticles()
-    console.log(this.objects)
   }
 
   getOfferArticles(): void {
