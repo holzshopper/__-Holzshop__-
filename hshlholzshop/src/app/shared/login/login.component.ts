@@ -16,9 +16,9 @@ export class LoginComponent implements OnInit {
   onSubmit(email: HTMLInputElement, password: HTMLInputElement) {
     if (this.service.login(email.value, password.value)) {
       this.router.navigate(['/']);
-      console.log('Login successfull');
+      console.log('Login erfolgreich');
     } else {
-      console.log('Unable to login');
+      console.log('Login fehlgeschlagen');
     }
   }
 

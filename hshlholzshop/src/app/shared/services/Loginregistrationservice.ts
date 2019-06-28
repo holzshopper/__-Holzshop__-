@@ -1,7 +1,6 @@
 import { User } from '../models/user';
 import { Injectable } from '@angular/core';
 import { UserService } from './userservice';
-// import * as firebase from 'firebase';
 
 @Injectable()
 export class Loginregistrationservice {
@@ -21,8 +20,12 @@ export class Loginregistrationservice {
   }
 
   isLoggedIn() {
-    this.current_user.can_login = false;
-    return this.current_user != null;
+    if (this.current_user === null) {
+      return false;
+    } else {
+      this.current_user.can_login = false;
+    return (this.current_user !== null);
+    }
   }
 
   emailExists(email: string) {
