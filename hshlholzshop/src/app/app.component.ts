@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Loginregistrationservice } from 'src/app/shared/services/Loginregistrationservice';
 
 @Component({
@@ -13,5 +13,4 @@ export class AppComponent implements OnInit {
     this.isLoggedIn = this.service.isLoggedIn()
     console.log(this.isLoggedIn)
   }
-
 }

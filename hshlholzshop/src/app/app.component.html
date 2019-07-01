@@ -9,7 +9,7 @@
                     <div class="column is-12 is-offset-0" style="position: relative; ">
                         <div style="float: right">
                             <button mat-flat-button color="primary" class="button-header"> Shopping Card</button>
-                            <div *ngIf="isLoggedIn; then login else MyAccout"></div>
+                            <div *ngIf="isLoggedIn; then MyAccout else login"></div>
                             <ng-template #login><button mat-flat-button color="primary"
                                 class="button-header" routerLink="./login">Login/Register</button></ng-template>
                             <ng-template #MyAccout><button mat-flat-button color="primary" class="button-header"
