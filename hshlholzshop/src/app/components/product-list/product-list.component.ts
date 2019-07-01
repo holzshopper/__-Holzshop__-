@@ -45,7 +45,6 @@ export class ProductListComponent implements OnInit {
         counter++;
       });
     });
-    console.log(this.ProductIDs);
   }
 
   receiveMessage($event) {
