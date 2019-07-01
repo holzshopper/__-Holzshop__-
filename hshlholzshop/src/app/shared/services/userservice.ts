@@ -31,6 +31,7 @@ export class UserService {
     if (user != null) {
       if (user.password === password) {
         if (user.can_login) {
+          this.changed.emit();
           return user;
         } else {
           console.log('Sie sind bereits eingeloggt');
