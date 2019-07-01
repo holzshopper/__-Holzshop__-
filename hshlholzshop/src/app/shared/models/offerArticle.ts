@@ -1,7 +1,9 @@
 export class OfferArticle {
-    id:number;
-    name:string;
-    oldPrice:number;
-    newPrice:number;
-    img:string;
+    constructor(
+        public id:number,
+        public name:string,
+        public oldPrice:number,
+        public newPrice:number,
+        public img:string 
+        ) {}
 }

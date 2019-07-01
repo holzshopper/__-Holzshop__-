@@ -8,9 +8,12 @@ import { ProductPageComponent } from './components/product-page/product-page.com
 import { LoginComponent } from './shared/login/login.component';
 import { ProductMiniComponent } from './components/product-mini/product-mini.component';
 import { ProductFilterComponent} from './shared/product-filter/product-filter.component';
+import { EditOfferComponent } from './shared/components/edit-offer/edit-offer.component';
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+
+import { RouteGuard } from './shared/services/auth.guard';
 
 
 
@@ -21,7 +24,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent},
   { path: 'test', component: ProductMiniComponent},
-  { path: 'filter', component: ProductFilterComponent}
+  { path: 'filter', component: ProductFilterComponent},
+  { path: 'editOffer', component: EditOfferComponent, canActivate: [RouteGuard]}
 ];
 
 @NgModule({

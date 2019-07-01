@@ -9,7 +9,7 @@ import { OfferArticle } from 'src/app/shared/models/offerArticle';
 })
 export class DashboardComponent implements OnInit {
   objects:OfferArticle[]
-  constructor(private service: OfferArticleService) { }
+  constructor(private service: OfferArticleService) {}
   ngOnInit() {
     this.getOfferArticles()
   }

@@ -1,9 +1,10 @@
 import { User } from '../models/user';
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { UserService } from './userservice';
 
 @Injectable()
 export class Loginregistrationservice {
+  @Output() changed = new EventEmitter();
   private current_user: User = null;
 
   constructor( private service: UserService) {}
@@ -11,12 +12,15 @@ export class Loginregistrationservice {
   login(email: string, password: string) {
     this.current_user = this.service.checkUserData(email, password);
     this.current_user.can_login = false;
+    this.changed.emit();
     return this.isLoggedIn();
   }
 
   logout() {
     this.current_user.can_login = true;
     this.current_user = null;
+    this.changed.emit();
+    console.log("Logout")
   }
 
   isLoggedIn() {

@@ -13,7 +13,11 @@
                             <ng-template #login><button mat-flat-button color="primary"
                                 class="button-header" routerLink="./login">Login/Register</button></ng-template>
                             <ng-template #MyAccout><button mat-flat-button color="primary" class="button-header"
-                                routerLink="./login">Mein Konto</button></ng-template>
+                                [matMenuTriggerFor]="menu">Mein Konto</button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item routerLink="./editOffer">Angebote Verwalten</button>
+                                    <button mat-menu-item (click)="onLogout()">Logout</button>
+                                </mat-menu></ng-template>
                         </div>
                     </div>
                 </div>

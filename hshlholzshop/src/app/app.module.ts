@@ -48,6 +48,7 @@ import { Loginregistrationservice } from './shared/services/Loginregistrationser
 import { UserService } from './shared/services/userservice';
 import { CookieService } from 'ngx-cookie-service';
 import { ProductFilterComponent } from './shared/product-filter/product-filter.component';
+import { EditOfferComponent } from './shared/components/edit-offer/edit-offer.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ProductFilterComponent } from './shared/product-filter/product-filter.c
     ProductListComponent,
     LoginComponent,
     ProductFilterComponent,
-    ProductMiniComponent
+    ProductMiniComponent,
+    EditOfferComponent
   ],
   imports: [
     ReactiveFormsModule,
