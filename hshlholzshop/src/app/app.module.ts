@@ -49,6 +49,7 @@ import { UserService } from './shared/services/userservice';
 import { CookieService } from 'ngx-cookie-service';
 import { ProductFilterComponent } from './shared/product-filter/product-filter.component';
 import { EditOfferComponent } from './shared/components/edit-offer/edit-offer.component';
+import { AuthGuard } from './shared/services/auth.guard';
 
 
 @NgModule({
@@ -105,7 +106,8 @@ import { EditOfferComponent } from './shared/components/edit-offer/edit-offer.co
   providers: [
     Loginregistrationservice,
     CookieService,
-    UserService
+    UserService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

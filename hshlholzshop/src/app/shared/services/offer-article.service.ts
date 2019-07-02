@@ -10,8 +10,8 @@ import { OFFERARTICLE } from '../mock-data/mockOfferArticle'
 export class OfferArticleService {
   @Output() changed = new EventEmitter();
   
-  getOfferArticle() {
-    return of(OFFERARTICLE);
+  getOfferArticles() {
+    return OFFERARTICLE.slice();
   }
 
   delete(id:string) {
@@ -20,9 +20,13 @@ export class OfferArticleService {
     console.log(OFFERARTICLE)
     }
   
-  addOfferArticle(article: OfferArticle) {
-    console.log(OFFERARTICLE.length)
-    OFFERARTICLE.push(article)
-    this.changed.emit
+  addOfferArticle(name:string, oldPrice:number, newPrice:number, img:string) {
+    const id = this.getMaxId()
+    OFFERARTICLE.push(new OfferArticle(id, name, oldPrice, newPrice, img))
+    this.changed.emit();
+  }
+
+  private getMaxId() {
+    return Math.max.apply(Math, OFFERARTICLE.map(function(o) {return o.id; })) + 1;
   }
 }

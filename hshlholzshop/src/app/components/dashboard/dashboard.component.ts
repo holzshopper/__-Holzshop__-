@@ -7,16 +7,13 @@ import { OfferArticle } from 'src/app/shared/models/offerArticle';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
-  objects:OfferArticle[]
-  constructor(private service: OfferArticleService) {}
-  ngOnInit() {
-    this.getOfferArticles()
+export class DashboardComponent {
+  objects: OfferArticle[] = [];
+  constructor(private service: OfferArticleService) {
+    this.objects = this.service.getOfferArticles();
+    this.service.changed.subscribe(() =>
+    {
+    this.objects = this.service.getOfferArticles();
+    });
   }
-
-  getOfferArticles(): void {
-    this.service.getOfferArticle()
-        .subscribe(objects => this.objects = objects);
-  }
-
 }

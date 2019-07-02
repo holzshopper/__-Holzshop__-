@@ -13,7 +13,7 @@ import { EditOfferComponent } from './shared/components/edit-offer/edit-offer.co
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 
-import { RouteGuard } from './shared/services/auth.guard';
+import { AuthGuard } from './shared/services/auth.guard';
 
 
 
@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'test', component: ProductMiniComponent},
   { path: 'filter', component: ProductFilterComponent},
-  { path: 'editOffer', component: EditOfferComponent, canActivate: [RouteGuard]}
+  { path: 'editOffer', component: EditOfferComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
